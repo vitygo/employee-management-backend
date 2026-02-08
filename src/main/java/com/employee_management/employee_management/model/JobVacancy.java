@@ -14,16 +14,34 @@ public class JobVacancy {
     private String description;
     private String requiredExperience;
     private BigDecimal hourlyRate;
-    @ManyToMany
-    @JoinTable(
-            name = "job_required_technologies",
-            joinColumns = @JoinColumn(name = "job_id"),
-            inverseJoinColumns = @JoinColumn(name = "technology_id")
-    )
-    private List<Technology> RequiredTechnologies;
+    private String dateCreated;
+    private boolean status;
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+//    @ManyToMany
+//    @JoinTable(
+//            name = "job_required_technologies",
+//            joinColumns = @JoinColumn(name = "job_id"),
+//            inverseJoinColumns = @JoinColumn(name = "technology_id")
+//    )
+//    private List<Technology> requiredTechnologies;
 
     public Long getId() {
         return id;
+    }
+
+    public String getDateCreated() {
+        return dateCreated;
+    }
+
+    public void setDateCreated(String dateCreated) {
+        this.dateCreated = dateCreated;
     }
 
     public void setId(Long id) {
@@ -62,11 +80,11 @@ public class JobVacancy {
         this.hourlyRate = hourlyRate;
     }
 
-    public List<Technology> getRequiredTechnologies() {
-        return RequiredTechnologies;
-    }
-
-    public void setRequiredTechnologies(List<Technology> requiredTechnologies) {
-        RequiredTechnologies = requiredTechnologies;
-    }
+//    public List<Technology> getRequiredTechnologies() {
+//        return requiredTechnologies;
+//    }
+//
+//    public void setRequiredTechnologies(List<Technology> requiredTechnologies) {
+//        requiredTechnologies = requiredTechnologies;
+//    }
 }

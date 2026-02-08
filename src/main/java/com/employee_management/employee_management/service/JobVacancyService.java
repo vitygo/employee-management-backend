@@ -33,7 +33,8 @@ public class JobVacancyService {
         vacancy.setDescription(updatedVacancy.getDescription());
         vacancy.setRequiredExperience(updatedVacancy.getRequiredExperience());
         vacancy.setHourlyRate(updatedVacancy.getHourlyRate());
-        vacancy.setRequiredTechnologies(updatedVacancy.getRequiredTechnologies());
+        vacancy.setStatus(updatedVacancy.isStatus());
+//        vacancy.setRequiredTechnologies(updatedVacancy.getRequiredTechnologies());
 
         return jobVacancyRepository.save(vacancy);
     }
