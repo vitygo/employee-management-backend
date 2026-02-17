@@ -15,7 +15,25 @@ public class JobVacancy {
     private String requiredExperience;
     private BigDecimal hourlyRate;
     private String dateCreated;
+    private String location;
+    private int candidateAmount;
     private boolean status;
+
+    public int getCandidateAmount() {
+        return candidateAmount;
+    }
+
+    public void setCandidateAmount(int candidateAmount) {
+        this.candidateAmount = candidateAmount;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
 
     public boolean isStatus() {
         return status;
